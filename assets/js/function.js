@@ -1,3 +1,18 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyC6GDC8FOnBn1PU5JSrghl60D6OZbBMWd4",
+    authDomain: "train-time-2e1bf.firebaseapp.com",
+    databaseURL: "https://train-time-2e1bf.firebaseio.com",
+    projectId: "train-time-2e1bf",
+    storageBucket: "",
+    messagingSenderId: "685306532538",
+    appId: "1:685306532538:web:4ebdc096376cccb5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var dataRef = firebase.database();
+
+  
 //assumptions
 var aFrequency = 10;
 //first departure
