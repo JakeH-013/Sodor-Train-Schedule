@@ -21,10 +21,6 @@ var firebaseConfig = {
     var trainFirst = moment($("#first-train-input").val().trim(), "HH:mm").format("X");
     var trainFrequency = $("#frequency-input").val().trim();
 
-    console.log(trainFirst);
-    console.log(trainDestination);
-    console.log(trainFirst);
-    console.log(trainFrequency);
     //creates local temp storage for data
     var newTrain = {
         name: trainName,
@@ -40,6 +36,19 @@ var firebaseConfig = {
     console.log(newTrain.first);
     console.log(newTrain.frequency);
 
+    alert("New line added");
+
+    // Clears text boxes
+    $("#train-name-input").val("");
+    $("#destination-input").val("");
+    $("#first-train-input").val("");
+    $("#frequency-input").val("");
+
+  });
+
+  //firebase event for adding new trains to the html
+  dataRef.ref().on("child_added", function(childSnapshot) {
+    console.log(childSnapshot.val());
   });
 
 
