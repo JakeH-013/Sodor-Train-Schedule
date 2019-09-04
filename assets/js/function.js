@@ -33,7 +33,7 @@ var firebaseConfig = {
         frequency: trainFrequency
     };
     //uploads inputs to the database
-    database.ref().push(newTrain);
+    dataRef.ref().push(newTrain);
 
     console.log(newTrain.name);
     console.log(newTrain.destination);
