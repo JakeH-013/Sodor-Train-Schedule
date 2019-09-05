@@ -1,0 +1,26 @@
+header,
+.row {
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background: url(../images/Zt22nzOwTVl5bTQ2uEbrzA6Hi6G4WSH7J5QseqDGzts.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+tbody,
+.form-group {
+    font-size: 14px;
+}
+
+header {
+
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 40px;
+    height: 160px;
+}

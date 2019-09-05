@@ -80,6 +80,7 @@ var firebaseConfig = {
     );
     //appends the row
     $("#train-table > tbody").append(newRow);
+    $("#time").text(moment(currentTime).format("hh:mm A"));
   });
 
 
