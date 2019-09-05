@@ -31,10 +31,10 @@ var firebaseConfig = {
     //uploads inputs to the database
     dataRef.ref().push(newTrain);
 
-    console.log(newTrain.name);
-    console.log(newTrain.destination);
-    console.log(newTrain.first);
-    console.log(newTrain.frequency);
+    // console.log(newTrain.name);
+    // console.log(newTrain.destination);
+    // console.log(newTrain.first);
+    // console.log(newTrain.frequency);
 
     alert("New line added");
 
@@ -49,6 +49,25 @@ var firebaseConfig = {
   //firebase event for adding new trains to the html
   dataRef.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
+    //store items in variables
+    var trainName = childSnapshot.val().name;
+    var trainDestination = childSnapshot.val().destination;
+    var firstTrain = childSnapshot.val().first;
+    var trainfrequency = childSnapshot.val().frequency;
+
+    console.log(trainName);
+    console.log(trainDestination);
+    console.log(firstTrain);
+    console.log(trainfrequency);
+    //adds new row to the table, which contains each piece of input/information
+    var newRow = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(trainDestination),
+        $("<td>").text(firstTrain),
+        $("<td>").text(trainfrequency)
+    );
+    //appends the row
+    $("#train-table > tbody").append(newRow);
   });
 
 
